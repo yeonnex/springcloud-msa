@@ -8,6 +8,7 @@
 # *.idea 와 *.iml 은 내갸 추가함
 *.idea
 *.iml
+target
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
