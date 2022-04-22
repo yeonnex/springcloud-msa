@@ -95,5 +95,28 @@ $ mvn compile package
 $ java -jar -Dserver.port=9004 ./target/user-service-0.0.1-SNAPSHOT.jar
 ![img_5.png](img_5.png)
 
+## <u>_API Gateway Service_</u>
+왜 필요한가?
+![img_8.png](img_8.png)
+![img_7.png](img_7.png)
+
+### dependency
+- spring gateway
+
+클라이언트에서 마이크로 서비스 호출시, 직접적인 마이크로 서비스의 주소를 클라이언트가 참조하게 되면,
+마이크로 서비스의 인스턴스 정보(주소)가 바뀌었을 때 클라이언트 단에서도 변경이 필요하게 되는 단점을 해결하기 위헤 api gateway 를 사용한다.
+클라이언트 - apigateway - 마이크로 서비스
+이런 구조를 가짐으로써, 변화에 유연한 대처를 할 수 있게 된다.
+또한 인증, 권한에 대한 단일작업을 할 수 있으며 부하분산 등을 쉽게 할 수 있다.
+
+- API Gateway Service
+- Netflix Ribbon 과 Zuul
+- Spring Cloud Gateway (Filter, Eureka(discovery service) 연동, Load Balancer)
+
+### 스프링 클라우드에서 msa 간통신
+- RestTemplate
+- FeignClient
+
+
 
 
