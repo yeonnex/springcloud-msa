@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Configuration;
 /**
  * application.yml 에서 할 일을 자바 클래스로 옮겨놓았다.
  */
-@Configuration
+// @Configuration
 public class FilterConfig {
-    @Bean
+    // @Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
         return builder.routes()
                 .route(r -> r.path("/first-service/**")
