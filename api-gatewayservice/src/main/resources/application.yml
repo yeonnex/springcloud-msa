@@ -17,16 +17,18 @@ spring:
           predicates:
             - Path=/first-service/**
           filters:
-            - AddRequestHeader=my-first-request, mymyfirst-reequest
-            - AddResponseHeader=my-first-response, mymyfirst-response
+#            - AddRequestHeader=my-first-request, mymyfirst-reequest
+#            - AddResponseHeader=my-first-response, mymyfirst-response
+            - CustomFilter
 
         - id: second-service
           uri: http://localhost:8082/
           predicates:
             - Path=/second-service/**
           filters:
-            - AddRequestHeader=my-secound-requeest, mymysecound-request
-            - AddResponseHeader=my-secound-response, mymysecound-request
+#            - AddRequestHeader=my-secound-requeest, mymysecound-request
+#            - AddResponseHeader=my-secound-response, mymysecound-request
+            - CustomFilter
 
   application:
     name: apigateway-service
